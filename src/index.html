@@ -1,13 +1,103 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- 3 bootstrap -->
+
+<!------ Include the above in your HEAD tag ---------->
+<!-- end -->
+<!-- bootstrap start -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- carosel link -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+ <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- end of carousel -->
+  <!-- bootstrap end -->
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/7d27c5ffb1.js" crossorigin="anonymous"></script>
+    <!-- font awesome -->
+  
   <meta charset="utf-8">
   <title>PractiseWebsite</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  
 </head>
 <body>
   <app-root></app-root>
 </body>
+
+
+
+
+<script>
+  $(document).ready(function(){
+
+$('.items').slick({
+dots: true,
+infinite: true,
+speed: 800,
+autoplay: true,
+autoplaySpeed: 2000,
+slidesToShow: 10,
+slidesToScroll: 10,
+responsive: [
+{
+breakpoint: 1024,
+settings: {
+slidesToShow: 6,
+slidesToScroll: 6,
+infinite: true,
+dots: true
+}
+},
+{
+breakpoint: 600,
+settings: {
+slidesToShow: 4,
+slidesToScroll: 4
+}
+},
+{
+breakpoint: 480,
+settings: {
+slidesToShow: 3,
+slidesToScroll: 3
+}
+}
+
+]
+});
+});
+</script>
+<!-- extra end -->
+
+<script>
+  $(".nav a").on("click", function(){
+   $(".nav").find(".active").removeClass("active");
+   $(this).parent().addClass("active");
+});
+</script>
+
+
+<script>
+  $(document).ready(function() {
+  
+
+  $('.list-group-item').click(function(e) {
+    e.preventDefault();
+    $('.list-group-item').removeClass('active');
+    $(this).addClass('active');
+    
+  });
+});
+</script>
+
 </html>
